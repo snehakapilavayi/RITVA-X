@@ -59,17 +59,6 @@ export default function SettingsPage() {
         </div>
       </div>
 
-      <div className="settings-section glass-card animate-fadeInUp delay-3" data-parallax-depth="0.015" data-scroll-speed="0.7">
-        <p className="settings-section-title label-mono">JOURNAL</p>
-        <div className="settings-item">
-          <span className="settings-item-label">Change Journal PIN</span>
-          <button className="btn-ghost settings-connect-btn">Update</button>
-        </div>
-        <div className="settings-item">
-          <span className="settings-item-label">Privacy Mode default</span>
-          <button className="btn-ghost settings-connect-btn">Toggle</button>
-        </div>
-      </div>
 
       <div className="settings-section glass-card animate-fadeInUp delay-4" data-parallax-depth="0.01" data-scroll-speed="0.9">
         <p className="settings-section-title label-mono">ABOUT</p>
