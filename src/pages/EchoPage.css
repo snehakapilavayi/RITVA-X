@@ -1,0 +1,231 @@
+
+
+.echo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.echo-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+.echo-toggles {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.toggle-btn {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-card);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-btn.active {
+  background: var(--color-primary-dim);
+  border-color: var(--border-accent);
+  color: var(--color-primary);
+}
+
+.echo-compose {
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.echo-title-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: var(--font-headline);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.echo-title-input::placeholder { color: var(--text-muted); }
+
+.echo-content-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+  resize: none;
+  line-height: 1.7;
+  min-height: 80px;
+}
+
+.echo-content-input::placeholder { color: var(--text-muted); }
+
+.echo-compose-footer {
+  margin-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+}
+
+.echo-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.echo-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.echo-tag.active {
+  background: var(--color-primary-dim);
+  border-color: var(--border-accent);
+  color: var(--color-primary);
+}
+
+.echo-compose-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.lock-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lock-toggle input { display: none; }
+
+.lock-icon { font-size: 18px; }
+
+.pin-input {
+  width: 80px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.echo-transmit-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* Notes list */
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.note-card {
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color var(--transition-base), transform var(--transition-fast);
+}
+
+.note-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-1px);
+}
+
+.note-card.blurred .note-preview,
+.note-card.blurred .note-title {
+  filter: blur(5px);
+  user-select: none;
+}
+
+.note-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.note-date { color: var(--text-muted); }
+
+.note-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-lock-icon { font-size: 12px; }
+
+.note-delete-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+  transition: color var(--transition-fast);
+}
+
+.note-delete-btn:hover { color: var(--status-avoided); }
+
+.note-locked {
+  padding: 8px 0;
+}
+
+.note-title {
+  font-family: var(--font-headline);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.note-preview {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.note-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-dim);
+  color: var(--color-primary);
+  border: 1px solid rgba(0,240,255,0.2);
+}

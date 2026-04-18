@@ -1,0 +1,182 @@
+.decision-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 7, 10, 0.95);
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+
+.decision-panel {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-card);
+  border-bottom: none;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  width: 100%;
+  max-width: 480px;
+  padding: 28px 20px 40px;
+  position: relative;
+  animation: slideUp 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.decision-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.decision-system-label {
+  color: var(--color-primary);
+}
+
+.decision-exec-id {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.decision-title {
+  font-family: var(--font-headline);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.decision-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.decision-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 16px 0;
+}
+
+.decision-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.countdown-number {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+  animation: pulse-glow 1s ease-in-out infinite;
+}
+
+.decision-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.decision-btn {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all var(--transition-base);
+  text-align: left;
+}
+
+.decision-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.decision-btn--do {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.25), rgba(0, 144, 187, 0.15));
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.decision-btn--do:hover {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.35), rgba(0, 144, 187, 0.25));
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.decision-btn--defer {
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid var(--border-card);
+}
+
+.decision-btn--defer:hover {
+  border-color: rgba(112, 0, 255, 0.4);
+}
+
+.decision-btn--avoid {
+  background: rgba(13, 17, 23, 0.5);
+  border: 1px solid var(--border-subtle);
+}
+
+.decision-btn--avoid:hover {
+  border-color: rgba(255, 62, 108, 0.3);
+}
+
+.decision-btn-icon {
+  font-size: 22px;
+  min-width: 28px;
+  text-align: center;
+}
+
+.decision-btn--do .decision-btn-icon { filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.8)); }
+
+.decision-btn-label {
+  font-family: var(--font-headline);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.decision-btn--do .decision-btn-label { color: var(--color-primary); }
+
+.decision-btn-sub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.decision-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.decision-close:hover {
+  border-color: var(--border-accent);
+  color: var(--color-primary);
+}
+
+.reschedule-form {
+  padding-top: 8px;
+}

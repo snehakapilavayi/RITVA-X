@@ -1,0 +1,92 @@
+
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ── Priority Pills ── */
+.priority-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.priority-pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-card);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.priority-pill.active.priority-critical {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+}
+
+.priority-pill.active.priority-high {
+  background: rgba(255, 149, 0, 0.15);
+  border-color: #FF9500;
+  color: #FF9500;
+  box-shadow: 0 0 12px rgba(255, 149, 0, 0.2);
+}
+
+.priority-pill.active.priority-normal {
+  background: rgba(138, 155, 174, 0.1);
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.priority-pill.active.priority-low {
+  background: rgba(74, 85, 104, 0.15);
+  border-color: var(--text-muted);
+  color: var(--text-muted);
+}
+
+.priority-pill:hover {
+  border-color: var(--border-accent);
+}
+
+/* ── Highlighted input (schedule mode) ── */
+.form-input--highlighted {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.1);
+  animation: highlightPulse 2s ease-in-out infinite;
+}
+
+@keyframes highlightPulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.1); }
+  50%      { box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.25); }
+}
+
+/* ── Schedule Nudge Banner ── */
+.schedule-nudge-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  background: rgba(255, 149, 0, 0.08);
+  border: 1px solid rgba(255, 149, 0, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.schedule-nudge-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.schedule-nudge-text {
+  font-size: 13px;
+  color: #FF9500;
+  line-height: 1.5;
+}
