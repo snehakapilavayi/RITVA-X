@@ -49,6 +49,11 @@ export default function OrbitPage() {
   const selectedDateStr = new Date(year, month, selected).toDateString()
   const dayTasks = tasks.filter(t => t.startTime && new Date(t.startTime).toDateString() === selectedDateStr)
 
+  // Calculate efficiency based on all non-avoided tasks
+  const relevantTasks = tasks.filter(t => t.status !== 'avoided')
+  const completedCount = relevantTasks.filter(t => t.status === 'completed').length
+  const efficiency = relevantTasks.length > 0 ? Math.round((completedCount / relevantTasks.length) * 100) : 0
+
   return (
     <main className="page orbit-page" ref={parallaxRef}>
       <div className="page-header animate-fadeInUp" data-parallax-depth="0.04" data-scroll-speed="0.5">
@@ -88,10 +93,10 @@ export default function OrbitPage() {
       <div className="efficiency-bar glass-card animate-fadeInUp delay-2" data-parallax-depth="0.02" data-scroll-speed="0.55">
         <div className="efficiency-header">
           <span className="label-mono">EFFICIENCY</span>
-          <span className="efficiency-value">92%</span>
+          <span className="efficiency-value">{efficiency}%</span>
         </div>
         <div className="progress-bar" style={{marginTop:8}}>
-          <div className="progress-fill" style={{width:'92%'}} />
+          <div className="progress-fill" style={{width:`${efficiency}%`}} />
         </div>
       </div>
 
